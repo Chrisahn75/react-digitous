@@ -1,26 +1,39 @@
 import React from "react";
 import './App.css';
-import Steps from "./components/Steps"
+import Box from "./components/Box"
 import "./styles/global.css"
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
 class App extends React.Component {
+
 tempMin = -20;
 tempMax = 40;
 heartMin = 80;
 heartMax = 180;
 stepsMin = 0;
 stepsMax = 50000;
+
   render() {
     return (
       <div className="container-fluid">
         <div className="row">
+          {/* WATER */}
+           <Box icon="local_drink" color="#3A85FF" value="1.5" unit="L" />
+
+          {/* STEPS */}
+          <Box icon="directions_walk" color="black" value="3000" unit="steps" />
+
+          {/* HEART */}
+          <Box icon="favorite" color="red" value="120" unit="bpm" />
+
+          {/* TEMPERATURE */}
+          <Box icon="wb_sunny" color="yellow" value="-10" unit="°C" />
+
           <p> Temperature : {this.tempMin}</p>
           <p> Heart: {this.heartMin}</p>
           <p> Steps : {this.stepsMin}</p>
-          <Steps />
         </div>
       </div>
     );
