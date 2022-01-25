@@ -5,15 +5,15 @@ import "./styles/global.css"
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+const tempMin = -20;
+const tempMax = 40;
+const heartMin = 80;
+const heartMax = 180;
+const stepsMin = 0;
+const stepsMax = 50000;
 
 class App extends React.Component {
 
-tempMin = -20;
-tempMax = 40;
-heartMin = 80;
-heartMax = 180;
-stepsMin = 0;
-stepsMax = 50000;
 
   render() {
     return (
@@ -31,9 +31,9 @@ stepsMax = 50000;
           {/* TEMPERATURE */}
           <Box icon="wb_sunny" color="yellow" value="-10" unit="°C" />
 
-          <p> Temperature : {this.tempMin}</p>
-          <p> Heart: {this.heartMin}</p>
-          <p> Steps : {this.stepsMin}</p>
+          <p> Temperature : {tempMin}</p>
+          <p> Heart: {heartMin}</p>
+          <p> Steps : {stepsMin}</p>
         </div>
       </div>
     );
