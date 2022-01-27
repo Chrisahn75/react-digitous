@@ -6,6 +6,15 @@ import "./styles/global.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends React.Component {
+  constructor() {
+		super();
+		this.state = {
+			water : 0,
+      heart : 120,
+      temperature : -10,
+      steps  : 3000
+		};
+  }
 
   render() {
     return (
@@ -25,16 +34,6 @@ class App extends React.Component {
         </div>
       </div>
     );
-  }
-  
-  constructor() {
-		super();
-		this.state = {
-			water : 0,
-      heart : 120,
-      temperature : -10,
-      steps  : 3000
-		};
   }
 }
 
