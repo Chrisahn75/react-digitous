@@ -3,7 +3,6 @@ import React from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 class Box extends React.Component {
   render() {
     return (
