@@ -5,15 +5,7 @@ import "./styles/global.css"
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const tempMin = -20;
-const tempMax = 40;
-const heartMin = 80;
-const heartMax = 180;
-const stepsMin = 0;
-const stepsMax = 50000;
-
 class App extends React.Component {
-
 
   render() {
     return (
@@ -29,14 +21,20 @@ class App extends React.Component {
           <Box icon="favorite" color="red" value="120" unit="bpm" />
 
           {/* TEMPERATURE */}
-          <Box icon="wb_sunny" color="yellow" value="-10" unit="°C" />
-
-          <p> Temperature : {tempMin}</p>
-          <p> Heart: {heartMin}</p>
-          <p> Steps : {stepsMin}</p>
+          <Box icon="wb_sunny" color="yellow" value="-10" unit="°C" />     
         </div>
       </div>
     );
+  }
+  
+  constructor() {
+		super();
+		this.state = {
+			water : 0,
+      heart : 120,
+      temperature : -10,
+      steps  : 3000
+		};
   }
 }
 
