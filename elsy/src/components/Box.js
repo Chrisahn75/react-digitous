@@ -3,7 +3,9 @@ import React from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 class Box extends React.Component {
+  
   render() {
     return (
       <div className="box col-sm-3 col-6">
